@@ -10,11 +10,13 @@ class Persona {
         $this->db = $database->conectar();
     }
 
-    // Obtener todos los registros
     public function obtenerTodas() {
         $query = "SELECT * FROM " . $this->table;
         $stmt = $this->db->prepare($query);
         $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        // Variable de retorno
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $resultado;
     }
 }
