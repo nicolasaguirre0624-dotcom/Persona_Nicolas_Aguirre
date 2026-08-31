@@ -13,7 +13,7 @@ $personas = $controller->listar();
 </head>
 <body>
     <h1>Registros de la tabla Persona</h1>
-    <table border="1" cellpadding="10">
+    <table border="2" cellpadding="10">
         <tr>
             <th>ID</th>
             <th>Nombre</th>
